@@ -255,7 +255,10 @@ public class AuthMethodPickerActivity extends AppCompatBase {
 
     @Override
     public void hideProgress() {
-        mProgressBar.setVisibility(View.INVISIBLE);
+         if (mProgressBar != null)
+        {
+            mProgressBar.setVisibility(View.INVISIBLE);
+        }
         for (int i = 0; i < mProviderHolder.getChildCount(); i++) {
             View child = mProviderHolder.getChildAt(i);
             child.setEnabled(true);
